@@ -20,7 +20,8 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3"
   },
   "keywords": [
     "gatsby"
@@ -30,7 +31,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop -o",
     "format": "prettier --write src/**/*.{js,jsx}",
+    "rimraf": "rimraf",
     "start": "npm run develop",
+    "start:prod": "yarn run rimraf public && yarn run build && yarn run serve",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },

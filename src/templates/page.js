@@ -1,20 +1,25 @@
 import React, {Component} from "react"
 
+import Layout from "./../components/layout"
+
 class PageTemplate extends Component {
     render() {
-        // const siteMetadata = this.props.data.site.siteMetadata
+        const siteMetadata = this.props.data.site.siteMetadata
         const currentPage = this.props.data.wordpressPage
 
+        console.log(siteMetadata)
         console.log(currentPage)
 
         return (
-            <div>
-                <h1 dangerouslySetInnerHTML={{__html: currentPage.title}}/>
-                <div dangerouslySetInnerHTML={{__html: currentPage.content}}/>
+            <Layout>
+                <div>
+                    <h1 dangerouslySetInnerHTML={{__html: currentPage.title}}/>
+                    <div dangerouslySetInnerHTML={{__html: currentPage.content}}/>
 
-                <p dangerouslySetInnerHTML={{__html: currentPage.date}} />
-                <p dangerouslySetInnerHTML={{__html: currentPage.slug}} />
-            </div>
+                    <p dangerouslySetInnerHTML={{__html: currentPage.date}} />
+                    <p dangerouslySetInnerHTML={{__html: currentPage.slug}} />
+                </div>
+            </Layout>
         )
     }
 }
