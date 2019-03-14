@@ -2,9 +2,9 @@ import React, { Component } from "react"
 import Link from "gatsby-link"
 import PropTypes from "prop-types"
 
-import Layout from "./../components/layout"
+import Layout from "../components/layout"
 
-class PostsTemplate extends Component {
+class PostsPage extends Component {
     render() {
         const data = this.props.data
 
@@ -17,9 +17,7 @@ class PostsTemplate extends Component {
                         <Link to={'post/' + node.slug}>
                             <h3>{node.title}</h3>
                         </Link>
-
                         <div className={"post-content"} dangerouslySetInnerHTML={{__html: node.excerpt}} />
-
                         {node.date}
                     </div>
                 ))}
@@ -29,17 +27,17 @@ class PostsTemplate extends Component {
     }
 }
 
-PostsTemplate.propTypes = {
+PostsPage.propTypes = {
     data: PropTypes.object.isRequired,
     edges: PropTypes.array,
 }
 
-export default PostsTemplate
+export default PostsPage
 
-export const pageQuery = graphql`
-    query postsQuery{
-        allWordpressPost{
-            edges{
+export const query = graphql`
+    query postsQuery {
+        allWordpressPost {
+            edges {
                 node{
                     id
                     title
