@@ -10,6 +10,20 @@ class PostTemplate extends Component {
             <Layout>
                 <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
+
+                {post.acf.facebook && post.acf.twitter && 
+                    <div>
+                        Facebook
+                        <br />
+                        {post.acf.facebook}
+                        <br />
+                        <br />
+                        Twitter
+                        <br />
+                    {post.acf.twitter}
+                </div>
+                }
+
             </Layout>
         )
     }
@@ -23,6 +37,10 @@ export const pageQuery = graphql`
         wordpressPost(id: { eq: $id }) {
             title
             content
+            acf {
+                facebook
+                twitter
+            }
         }
         site {
             siteMetadata {

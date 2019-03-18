@@ -40,35 +40,3 @@ export default () => (
     )}
   />
 )
-// export default () => (
-//     <StaticQuery
-//       query={graphql`
-//         query postsQuery2 {
-//             allWordpressPost {
-//                 edges {
-//                     node{
-//                         id
-//                         title
-//                         excerpt
-//                         slug
-//                         date(formatString: "MMMM DD, YYYY")
-//                     }
-//                 }
-//             }
-//         }
-//       `}
-//       render={data => (
-//         <header>
-//                 {data.allWordpressPost.edges.map(({node}) => (
-//                     <div key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
-//                         <Link to={'post/' + node.slug}>
-//                             <h3>{node.title}</h3>
-//                         </Link>
-//                         <div className={"post-content"} dangerouslySetInnerHTML={{__html: node.excerpt}} />
-//                         {node.date}
-//                     </div>
-//                 ))}
-//         </header>
-//       )}
-//     />
-//   )

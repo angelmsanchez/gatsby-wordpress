@@ -44,6 +44,10 @@ export const query = graphql`
                     excerpt
                     slug
                     date(formatString: "MMMM DD, YYYY")
+                    acf {
+                        facebook
+                        twitter
+                    }
                 }
             }
         }
