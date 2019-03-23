@@ -1,23 +1,22 @@
 import React, { Component } from "react"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 import Layout from "./../components/layout"
 
 class PostTemplate extends Component {
     render() {
         const post = this.props.data.wordpressPost
-        const resolutions = post.featured_media.localFile.childImageSharp.resolutions
+        // const resolutions = post.featured_media ? post.featured_media.localFile.childImageSharp.resolutions : null
         
         return (
             <Layout>
                 <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
                 
-                {resolutions &&
+                {/* {resolutions &&
                     <div>
                         <Img resolutions={resolutions}/>
-                        {/* < img src={resolutions.src} alt=""/> */}
                     </div>
-                }
+                } */}
 
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
 
@@ -50,18 +49,6 @@ export const pageQuery = graphql`
             acf {
                 facebook
                 twitter
-            }
-            featured_media {
-                localFile {
-                    childImageSharp {
-                        resolutions(width:500, height: 200) {
-                            src
-                            width
-                            height
-                            srcSet
-                        }
-                    }
-                }
             }
         }
         site {

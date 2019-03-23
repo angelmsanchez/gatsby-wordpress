@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/gatsby-wp`,
   siteMetadata: {
     title: `Gatsby Wordpress`,
     subtitle: `Fech Data From Local WP install`,

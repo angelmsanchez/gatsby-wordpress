@@ -50,22 +50,6 @@ export const query = graphql`
                     excerpt
                     slug
                     date(formatString: "MMMM DD, YYYY")
-                    acf {
-                        facebook
-                        twitter
-                    }
-                    featured_media {
-                        localFile{
-                          childImageSharp{
-                            resolutions(width: 300, height: 300){
-                              src
-                              width
-                              height
-                              srcSet
-                            }
-                          }
-                        }
-                    }
                 }
             }
         }
