@@ -4,8 +4,8 @@ const path = require(`path`)
 const slash = require(`slash`)
 const queries = require(`./src/queries/queries.js`)
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-    const { createPage } = boundActionCreators;
+exports.createPages = ({ graphql, actions }) => {
+    const { createPage } = actions;
 
     return new Promise((resolve, reject) => {
         // Templates

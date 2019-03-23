@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Link from "gatsby-link"
 import PropTypes from "prop-types"
+import Img from 'gatsby-image'
 
 import Layout from "../components/layout"
 
@@ -14,6 +15,11 @@ class PostsPage extends Component {
 
                 {data.allWordpressPost.edges.map(({node}) => (
                     <div key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
+                        {node.featured_media && node.featured_media.localFile.childImageSharp.resolutions &&
+                            <div>
+                                <Img resolutions={node.featured_media.localFile.childImageSharp.resolutions} />
+                            </div>
+                        }
                         <Link to={'post/' + node.slug}>
                             <h3>{node.title}</h3>
                         </Link>
@@ -38,7 +44,7 @@ export const query = graphql`
     query postsQuery {
         allWordpressPost {
             edges {
-                node{
+                node {
                     id
                     title
                     excerpt
@@ -47,6 +53,18 @@ export const query = graphql`
                     acf {
                         facebook
                         twitter
+                    }
+                    featured_media {
+                        localFile{
+                          childImageSharp{
+                            resolutions(width: 300, height: 300){
+                              src
+                              width
+                              height
+                              srcSet
+                            }
+                          }
+                        }
                     }
                 }
             }
