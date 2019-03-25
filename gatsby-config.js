@@ -32,12 +32,13 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `localhost/gatsby-wp/`,
+        baseUrl: `tokiotaweb.azurewebsites.net/`,
         protocol: `http`,
         hostingWPCOM: false,
         useACF: true,
-        verboseOutput: true
+        verboseOutput: true,
       },
     },
+    `gatsby-plugin-sass`,
   ],
 }

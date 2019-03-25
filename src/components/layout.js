@@ -1,10 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { graphql } from "gatsby"
 import Helmet from 'react-helmet'
 
-import Header from "../components/header"
-import Menu from "../components/menu"
+import Header from "./header"
+import Footer from "./footer"
 
 import "./layout.css"
 
@@ -26,10 +25,9 @@ const Layout = ({ children, data }) => (
         paddingTop: 0,
       }}
     >
-      <Menu />
       <main>{children}</main>
-      <footer></footer>
     </div>
+    <Footer></Footer>
   </div>)
 
 Layout.propTypes = {
@@ -37,21 +35,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-// export const pageQuery = graphql`
-//   query LayoutQuery {
-//     allWordpressWpApiMenusMenusItems {
-//       edges {
-//         node {
-//           id
-//           name
-//           items {
-//             title
-//             object_slug
-//             order
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

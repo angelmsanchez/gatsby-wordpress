@@ -19,18 +19,6 @@ module.exports = `
                     status
                     template
                     format
-                    featured_media {
-                        localFile {
-                            childImageSharp {
-                                resolutions(width:500, height: 200) {
-                                    src
-                                    width
-                                    height
-                                    srcSet
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }

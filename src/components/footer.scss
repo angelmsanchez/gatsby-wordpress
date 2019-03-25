@@ -1,0 +1,21 @@
+
+@import './../styles/colors';
+
+#footer {
+  background: $secondary-color;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 30px;
+  font-size: 0.8rem;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+
+  span {
+    margin-right: 20px;
+  }
+}

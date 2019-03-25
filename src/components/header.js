@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
 
+import Menu from "./menu"
+
 const Header = () => (
   <header
     style={{
@@ -26,6 +28,7 @@ const Header = () => (
           Gatsby Wordpress
         </Link>
       </h1>
+      <Menu />
     </div>
   </header>
 )

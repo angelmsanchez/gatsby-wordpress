@@ -6,6 +6,7 @@ import Layout from "./../components/layout"
 class PostTemplate extends Component {
     render() {
         const post = this.props.data.wordpressPost
+        console.log(post)
         // const resolutions = post.featured_media ? post.featured_media.localFile.childImageSharp.resolutions : null
         
         return (
@@ -20,7 +21,7 @@ class PostTemplate extends Component {
 
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
 
-                {post.acf.facebook && post.acf.twitter && 
+                {/* {post.acf.facebook && post.acf.twitter && 
                     <div>
                         Facebook
                         <br />
@@ -31,7 +32,7 @@ class PostTemplate extends Component {
                         <br />
                     {post.acf.twitter}
                 </div>
-                }
+                } */}
 
             </Layout>
         )
@@ -46,10 +47,6 @@ export const pageQuery = graphql`
         wordpressPost(id: { eq: $id }) {
             title
             content
-            acf {
-                facebook
-                twitter
-            }
         }
         site {
             siteMetadata {
