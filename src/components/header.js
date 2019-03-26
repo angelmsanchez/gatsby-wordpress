@@ -2,34 +2,18 @@ import { Link } from "gatsby"
 import React from "react"
 
 import Menu from "./menu"
+import tokiotaHorizontal from './../assets/img/tokiota-horizontal.png';
+import './header.scss'
 
 const Header = () => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          Gatsby Wordpress
-        </Link>
-      </h1>
-      <Menu />
-    </div>
+  <header id="header">
+    <h1 style={{ margin: 0 }}>
+      <Link to="/">
+        <img className="logo" src={tokiotaHorizontal} alt="tokiota" />
+      </Link>
+    </h1>
+    
+    <Menu />
   </header>
 )
 

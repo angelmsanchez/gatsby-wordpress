@@ -1,6 +1,9 @@
 import React from "react"
+
 import { StaticQuery, graphql } from "gatsby"
 import Link from "gatsby-link"
+
+import './menu.scss'
 
 export default () => (
   <StaticQuery
@@ -23,8 +26,7 @@ export default () => (
     `
     }
     render={data => (
-        <div>
-            <h1>Main Menu</h1>
+        <div id="menu">
             <ul>
                 {data.allWordpressWpApiMenusMenusItems.edges.map((node) =>
                     node.node.items.map((item) =>
@@ -35,6 +37,11 @@ export default () => (
                         </li>
                     )
                 )}
+                <li>
+                    <Link to={'/posts'}>
+                        Blog
+                    </Link>
+                </li>
             </ul>
         </div>
     )}

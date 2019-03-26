@@ -1,0 +1,44 @@
+@import './../styles/colors';
+@import './../styles/devices';
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding: 0 15px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+
+  .logo {
+    width: 90px;
+  }
+
+
+  .flags {
+    display: flex;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 0.8rem;
+
+  }
+}
+
+@media screen and (min-width: $screen-xs) {
+  #header {
+
+    .logo {
+      width: 150px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  #header {
+
+    .logo {
+      width: 180px;
+    }
+
+  }
+}
