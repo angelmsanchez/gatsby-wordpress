@@ -8,7 +8,7 @@ import Footer from "./footer"
 import "./layout.scss"
 
 const Layout = ({ children, data }) => (
-  <div>
+  <div id="tokiota-web">
     <Helmet
       title="Gatsby Default Starter"
       meta={[

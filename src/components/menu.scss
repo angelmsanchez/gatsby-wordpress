@@ -1,5 +1,13 @@
+@import './../styles/colors';
+
 #menu {
-  ul {
-    display: flex;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    padding: 0 5px;
+    color: $red-tokiota;
   }
 }

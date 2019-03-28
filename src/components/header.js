@@ -7,12 +7,9 @@ import './header.scss'
 
 const Header = () => (
   <header id="header">
-    <h1 style={{ margin: 0 }}>
-      <Link to="/">
-        <img className="logo" src={tokiotaHorizontal} alt="tokiota" />
-      </Link>
-    </h1>
-    
+    <Link to="/">
+      <img className="logo" src={tokiotaHorizontal} alt="tokiota" />
+    </Link>
     <Menu />
   </header>
 )
