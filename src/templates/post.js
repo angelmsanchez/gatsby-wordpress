@@ -6,7 +6,6 @@ import Layout from "./../components/layout"
 class PostTemplate extends Component {
     render() {
         const post = this.props.data.wordpressPost
-        console.log(post)
         // const resolutions = post.featured_media ? post.featured_media.localFile.childImageSharp.resolutions : null
         
         return (
