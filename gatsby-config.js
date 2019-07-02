@@ -37,6 +37,10 @@ module.exports = {
         hostingWPCOM: false,
         useACF: true,
         verboseOutput: true,
+        searchAndReplaceContentUrls: {
+          sourceUrl: "/wp-content/uploads/",
+          replacementUrl: "http://tokiotaweb.azurewebsites.net/wp-content/uploads/",
+        },
       },
     },
     `gatsby-plugin-sass`,
